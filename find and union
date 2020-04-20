@@ -1,0 +1,16 @@
+https://practice.geeksforgeeks.org/problems/disjoint-set-union-find/1
+
+int find(int a[],int x)
+{
+       if ( x == a[x] )
+       return x ;
+       return find ( a , a[x] ) ;
+}
+void unionSet(int a[],int x,int z)
+{
+	x = find ( a , x ) ;
+	z = find ( a , z ) ;
+	if ( x == z )
+	return ; 
+	a[x] = z ;
+}
